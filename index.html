@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Турнирная таблица</title>
+
+</head>
+
+<body>
+  <main class="main">
+    <h1>Турнирная таблица</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Место</th>
+          <th>ФИО</th>
+          <th>Город</th>
+          <th>Машина</th>
+
+          <th><label>Общая сумма баллов
+              <input type="radio" class="race__input" name="race" value="summ"></label>
+          </th>
+          <th><label>Первый заезд
+              <input type="radio" class="race__input" name="race" value="0"></label>
+          </th>
+          <th><label>Второй заезд
+              <input type="radio" class="race__input" name="race" value="1"></label>
+          </th>
+          <th><label>Третий заезд
+              <input type="radio" class="race__input" name="race" value="2"></label>
+          </th>
+          <th><label>Четвертый заезд
+              <input type="radio" class="race__input" name="race" value="3"></label>
+          </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Сидоров Е.</td>
+          <td>Прохладный</td>
+          <td>Toyota Chaser</td>
+          <td>
+            <p>1:10</p>
+          </td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <script src="./assets/js/classSort.js"></script>
+  <script src="./assets/js/createElementDom.js"></script>
+  <script src="./assets/js/drawTableHtml.js"></script>
+</body>
+
+</html>
