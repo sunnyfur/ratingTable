@@ -8,7 +8,7 @@
 }
 
 .container__wrapper {
-  width: calc($desktop - 280px);
+  width: $desktop;
   @media screen and (max-width: $desktop) {
     width: calc(100% - 60px);
   }

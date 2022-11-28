@@ -14,47 +14,44 @@
   <main class="container__wrapper">
 
     <h1 class="h1">Турнирная таблица</h1>
-    <form class="form_mobile">
-      <label>Общая сумма баллов
-        <input type="radio" class="race__input" name="race" value="summ" checked></label>
 
-      <label>Первый заезд
-        <input type="radio" class="race__input" name="race" value="0"></label>
-
-      <label>Второй заезд
-        <input type="radio" class="race__input" name="race" value="1"></label>
-
-      <label>Третий заезд
-        <input type="radio" class="race__input" name="race" value="2"></label>
-
-      <label>Четвертый заезд
-        <input type="radio" class="race__input" name="race" value="3"></label>
-    </form>
     <table class="table">
       <thead class="table__head">
-        <tr>
-          <th class="data_hide">Место</th>
-          <th class="data_hide">ФИО</th>
-          <th class="data_hide">Город</th>
-          <th class="data_hide">Машина</th>
+        <tr class="head__row">
+          <th class="data_hide col_place">Место</th>
+          <th class="data_hide col_fio">ФИО</th>
+          <th class="data_hide col_town">Город</th>
+          <th class="data_hide cok_car">Машина</th>
 
-          <th><label>Общая сумма баллов
-              <input type="radio" class="race__input" name="race" value="summ" checked></label>
+          <th class="race col_sum">
+            <input type="radio" id="idRaceSumm" class="race__input" name="race" value="summ" checked>
+            <label for="idRaceSumm" class="race__label">Общая
+              сумма баллов</label>
           </th>
-          <th><label>Первый заезд
-              <input type="radio" class="race__input" name="race" value="0"></label>
+
+          <th class="race col_race">
+            <input type="radio" id="idRace0" class="race__input" name="race" value="0">
+            <label for="idRace0" class="race__label">Первый
+              заезд</label>
           </th>
-          <th><label>Второй заезд
-              <input type="radio" class="race__input" name="race" value="1"></label>
+          <th class="race col_race">
+            <input type="radio" id="idRace1" class="race__input" name="race" value="1">
+            <label for="idRace1" class="race__label">Второй
+              заезд</label>
           </th>
-          <th><label>Третий заезд
-              <input type="radio" class="race__input" name="race" value="2"></label>
+          <th class="race col_race">
+            <input type="radio" id="idRace2" class="race__input" name="race" value="2">
+            <label for="idRace2" class="race__label">Третий
+              заезд</label>
           </th>
-          <th><label>Четвертый заезд
-              <input type="radio" class="race__input" name="race" value="3"></label>
+          <th class="race col_race">
+            <input type="radio" id="idRace3" class="race__input" name="race" value="3">
+            <label for="idRace3" class="race__label">Четвертый
+              заезд</label>
           </th>
 
         </tr>
+
       </thead>
       <tbody class="table__body">
 

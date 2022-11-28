@@ -2,13 +2,17 @@
   background-color: $light-gray;
   border-radius: 0.5rem;
   display: table;
-  line-height: 1.5rem;
-  transition: 1s ease ease-in-out;
-  // padding: 1rem;
+  line-height: 2rem;
+  width: 100%;
+  transition: 0.5s ease ease-in-out;
   text-align: center;
-  th {
-    padding: 1rem;
-  }
+}
+.col_sum {
+  width: 10%;
+}
+.col_place,
+.col_race {
+  width: 8%;
 }
 
 .table__row:nth-child(even) {
@@ -23,7 +27,18 @@
   .table {
     width: 100%;
   }
-  .table__head {
+  .head__row {
+    display: flex;
+    flex-direction: column;
+    th {
+      padding: 0;
+    }
+  }
+  .race {
+    width: 100%;
+  }
+
+  .data_hide {
     display: none;
   }
   .table__row {
@@ -37,13 +52,6 @@
     }
   }
 }
-
-.form_mobile {
-  display: none;
-  @media screen and (max-width: $tablet) {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    background-color: $mid-gray;
-  }
+.active {
+  background-color: rgba($green, 0.5);
 }
