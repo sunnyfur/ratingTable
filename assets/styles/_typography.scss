@@ -1,7 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pacifico&display=swap");
+@font-face {
+  font-family: "Pacifico";
+  src: url("../../assets/fonts/Pacifico/Pacifico-Regular.ttf");
 
-$header: "Nunito Sans", sans-serif;
-$text: "Pacifico", cursive;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../assets/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+
+  font-weight: 400;
+}
+
+$header: "Pacifico", cursive;
+$text: "Nunito Sans", sans-serif;
 .h1 {
   color: $green;
   text-align: center;
@@ -9,5 +21,5 @@ $text: "Pacifico", cursive;
   font-size: 3rem;
 }
 .table {
-  font-family: text;
+  font-family: $text;
 }
