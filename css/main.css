@@ -87,11 +87,16 @@
   }
   .table__row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .table__data {
+    border-bottom: dashed 0.1px #4c4947;
+    display: flex;
+    gap: 1rem;
   }
   .table__data::before {
     content: attr(data-label);
-    float: left;
+    font-weight: bold;
   }
 }
 
