@@ -59,6 +59,14 @@
       </tbody>
     </table>
   </main>
+  <?php
+     $data_attemts= json_encode(file_get_contents("mock/data_attemts.json"));
+     $data_cars= json_encode(file_get_contents("mock/data_cars.json"));
+?>
+<script>
+  let data_attemts=<?= $data_attemts?>;
+  let data_cars=<?= $data_cars?>;
+</script>
   <script src="assets/php/test.php" language="php"></script>
   <script src="assets/js/classSort.js"></script>
   <script src="assets/js/createElementDom.js"></script>

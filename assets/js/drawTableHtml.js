@@ -67,9 +67,8 @@ const handleChange = (e) => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await SortClass.Init();
+  SortClass.Init();
 
-  const table = document.querySelector("tbody");
   sortTable("summ");
 
   document.querySelectorAll(".race__input").forEach((input) => {

@@ -4,22 +4,17 @@ class SortClass {
   static #data_table = "";
 
   static async Init() {
-    await this.setSortedIds();
-    await this.setSortedData();
+    this.setSortedIds();
+    this.setSortedData();
     this.setSort();
   }
-  static readFile = (path) => {
-    const res = fetch(path).then((response) => response.json());
-    return res;
-  };
+
   //get arr of ids sorted by result
-  static async setSortedIds() {
-    const data_attemts = await SortClass.readFile(
-      "../../mock/data_attemts.json"
-    );
+  static setSortedIds() {
     const groupedResults = {};
-    Object.keys(data_attemts).forEach((key) => {
-      const { id, result } = data_attemts[key];
+    const parseData = JSON.parse(data_attemts);
+    Object.keys(parseData).forEach((key) => {
+      const { id, result } = parseData[key];
       // console.log(id, result);
       if (groupedResults.hasOwnProperty(id)) {
         groupedResults[id]["summ"] += result;
@@ -37,9 +32,9 @@ class SortClass {
       (a, b) => b.summ - a.summ
     );
   }
-  static async setSortedData() {
-    const data_cars = await SortClass.readFile("../../mock/data_cars.json");
-    this.#data_cars = Object.values(data_cars);
+  static setSortedData() {
+    // const data_cars = await SortClass.readFile("../../mock/data_cars.json");
+    this.#data_cars = Object.values(JSON.parse(data_cars));
   }
   static getCurrPerson(id) {
     return this.#data_cars.filter((elem) => elem.id == id)[0];
