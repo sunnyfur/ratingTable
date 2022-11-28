@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pacifico&display=swap");
+.h1 {
+  color: #6ead3a;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 3rem;
+}
+
+.table {
+  font-family: text;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #222022;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__wrapper {
+  width: calc($desktop - 280px);
+}
+
+@media screen and (max-width: 1440px) {
+  .container__wrapper {
+    width: calc(100% - 60px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container__wrapper {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .container__wrapper {
+    width: calc(100% - 20px);
+  }
+}
+
+.table {
+  background-color: #efedef;
+  border-radius: 0.5rem;
+  display: table;
+  line-height: 1.5rem;
+  transition: 1s ease ease-in-out;
+  text-align: center;
+}
+
+.table th {
+  padding: 1rem;
+}
+
+.table__row:nth-child(even) {
+  background-color: #ceccce;
+}
+
+.table__head {
+  background-color: #ceccce;
+}
+
+@media screen and (max-width: 980px) {
+  .table {
+    width: 100%;
+  }
+  .table__head {
+    display: none;
+  }
+  .table__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .table__data::before {
+    content: attr(data-label);
+    float: left;
+  }
+}
+
+.form_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .form_mobile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: #ceccce;
+  }
+}
+/*# sourceMappingURL=main.css.map */

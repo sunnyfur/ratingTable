@@ -6,22 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Турнирная таблица</title>
-
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
-  <main class="main">
-    <h1>Турнирная таблица</h1>
-    <table>
-      <thead>
+<body class="container">
+  <main class="container__wrapper">
+
+    <h1 class="h1">Турнирная таблица</h1>
+    <form class="form_mobile">
+      <label>Общая сумма баллов
+        <input type="radio" class="race__input" name="race" value="summ" checked></label>
+
+      <label>Первый заезд
+        <input type="radio" class="race__input" name="race" value="0"></label>
+
+      <label>Второй заезд
+        <input type="radio" class="race__input" name="race" value="1"></label>
+
+      <label>Третий заезд
+        <input type="radio" class="race__input" name="race" value="2"></label>
+
+      <label>Четвертый заезд
+        <input type="radio" class="race__input" name="race" value="3"></label>
+    </form>
+    <table class="table">
+      <thead class="table__head">
         <tr>
-          <th>Место</th>
-          <th>ФИО</th>
-          <th>Город</th>
-          <th>Машина</th>
+          <th class="data_hide">Место</th>
+          <th class="data_hide">ФИО</th>
+          <th class="data_hide">Город</th>
+          <th class="data_hide">Машина</th>
 
           <th><label>Общая сумма баллов
-              <input type="radio" class="race__input" name="race" value="summ"></label>
+              <input type="radio" class="race__input" name="race" value="summ" checked></label>
           </th>
           <th><label>Первый заезд
               <input type="radio" class="race__input" name="race" value="0"></label>
@@ -38,17 +56,8 @@
 
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Сидоров Е.</td>
-          <td>Прохладный</td>
-          <td>Toyota Chaser</td>
-          <td>
-            <p>1:10</p>
-          </td>
-          <td>10</td>
-        </tr>
+      <tbody class="table__body">
+
       </tbody>
     </table>
   </main>

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Pacifico&display=swap");
+
+$header: "Nunito Sans", sans-serif;
+$text: "Pacifico", cursive;
+.h1 {
+  color: $green;
+  text-align: center;
+  font-family: $header;
+  font-size: 3rem;
+}
+.table {
+  font-family: text;
+}

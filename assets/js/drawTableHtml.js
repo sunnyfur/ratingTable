@@ -1,14 +1,43 @@
 const drawTableRow = (person, place) => {
-  const row = createElemDOM("tr");
-  row.appendChild(createElemDOM("td", "", place));
-  row.appendChild(createElemDOM("td", "", person.name));
-  row.appendChild(createElemDOM("td", "", person.city));
-  row.appendChild(createElemDOM("td", "", person.car));
-  row.appendChild(createElemDOM("td", "", person.summ.toString()));
-  row.appendChild(createElemDOM("td", "", person.results[0].toString()));
-  row.appendChild(createElemDOM("td", "", person.results[1].toString()));
-  row.appendChild(createElemDOM("td", "", person.results[2].toString()));
-  row.appendChild(createElemDOM("td", "", person.results[3].toString()));
+  const cells = [
+    { label: "Место", data: place },
+    { label: "ФИО", data: person.name },
+    { label: "Город", data: person.city },
+    { label: "Машина", data: person.car },
+    { label: "Общая сумма баллов", data: person.summ.toString() },
+    { label: "Первый заезд", data: person.results[0].toString() },
+    { label: "Второй заезд", data: person.results[1].toString() },
+    { label: "Третий заезд", data: person.results[2].toString() },
+    { label: "Четвертый заезд", data: person.results[3].toString() },
+  ];
+
+  const row = createElemDOM("tr", "table__row");
+
+  cells.forEach((cell) => {
+    let cellHTML = createElemDOM("td", "table__data", cell.data);
+    row.appendChild(cellHTML);
+    cellHTML.dataset.label = cell.label;
+  });
+
+  // let cell = createElemDOM("td", "table__data", place);
+  // row.appendChild(cell);
+  // cell.dataSet.cell = "Место";
+  // row.appendChild(createElemDOM("td", "table__data", person.name));
+  // row.appendChild(createElemDOM("td", "table__data", person.city));
+  // row.appendChild(createElemDOM("td", "table__data", person.car));
+  // row.appendChild(createElemDOM("td", "table__data", person.summ.toString()));
+  // row.appendChild(
+  //   createElemDOM("td", "table__data", person.results[0].toString())
+  // );
+  // row.appendChild(
+  //   createElemDOM("td", "table__data", person.results[1].toString())
+  // );
+  // row.appendChild(
+  //   createElemDOM("td", "table__data", person.results[2].toString())
+  // );
+  // row.appendChild(
+  //   createElemDOM("td", "table__data", person.results[3].toString())
+  // );
   return row;
 };
 

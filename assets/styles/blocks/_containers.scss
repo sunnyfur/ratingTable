@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color-bg;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__wrapper {
+  width: calc($desktop - 280px);
+  @media screen and (max-width: $desktop) {
+    width: calc(100% - 60px);
+  }
+  @media screen and (max-width: $tablet) {
+    width: calc(100% - 40px);
+  }
+  @media screen and (max-width: $mobile) {
+    width: calc(100% - 20px);
+  }
+}
