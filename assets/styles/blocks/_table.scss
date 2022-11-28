@@ -6,6 +6,9 @@
   width: 100%;
   transition: 0.5s ease ease-in-out;
   text-align: center;
+  th {
+    height: 100px;
+  }
 }
 .col_sum {
   width: 10%;
@@ -32,6 +35,7 @@
     flex-direction: column;
     th {
       padding: 0;
+      height: auto;
     }
   }
   .race {

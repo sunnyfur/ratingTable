@@ -6,11 +6,13 @@
 }
 
 .race__label {
-  display: block;
+  display: flex;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: rgba($green, 0.5);
